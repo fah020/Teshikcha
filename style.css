@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .fa-bars{
+    color: black;
+    font-size: 35px;
+    position: relative;
+    padding: 15px 0;
+    right: 100px;
+  }
+
+  .fa-xmark{
+    position: relative;
+    padding: 15px 0;
+    right: 100px;
+    font-size: 40px;
+  }
+    
+  .hamburger, .close {
+    border: none;
+    cursor: pointer;
+    /* position absolute position the icons relative to the body because they have no position relative parents*/
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    color: white;
+  }
+  
+  .hamburger {
+    background: white;
+  }
+  
+  .close {
+    background: black;
+  }
+  
+  .hamburger img, .close img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .navbar {
+    position: absolute;
+    /* a higher z-index put navbar above hamburger */
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* basic menu styling*/
+    list-style: none;
+    background: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* animate slide up/down */
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+  }
+  
+  /* :target is called when its anchor id #navbar is called by clicking on the hamburger which has href="#navbar" */
+  
+  .navbar:target {
+    /* show navbar */
+    transform: translateY(0);
+  }
+  
+  li a {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* remove default underline and add our own with padding and border bottom */
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
+  }
+  
+  li a:hover, li a:focus {
+    /* show border bottom */
+    border-bottom: 1px solid white;
+  }
+
+  a,li{
+    list-style: none;
+    text-decoration: none;
+  }
+
+  .header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .container{
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.nav__list{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    max-width: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo__text{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main{
+    padding: 100px 0;
+}
+
+.section__img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__img img{
+    max-width: 300px;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.section__img h2{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.section__img p{
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
