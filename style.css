@@ -7,16 +7,12 @@
   .fa-bars{
     color: black;
     font-size: 35px;
-    position: relative;
-    padding: 15px 0;
-    right: 100px;
+    padding: 17px 0;
   }
 
   .fa-xmark{
-    position: relative;
-    padding: 15px 0;
-    right: 100px;
     font-size: 40px;
+    padding: 20px 0;
   }
     
   .hamburger, .close {
